@@ -1,0 +1,20 @@
+CREATE OR REPLACE VIEW `anggi.personal.v_dsc_sales_channel` AS
+WITH
+
+trx as (
+SELECT
+sum(NumWebPurchases) as trx_web,
+sum(NumCatalogPurchases) as trx_catalog,
+sum(NumStorePurchases) as trx_store
+FROM `anggi.personal.sdc_dataset`
+),
+
+main as (
+SELECT 'Web' as channel, trx_web as trx_channel FROM trx
+UNION ALL
+SELECT 'Catalog' as channel, trx_catalog as trx_channel FROM trx
+UNION ALL
+SELECT 'Store' as channel, trx_store as trx_channel FROM trx
+)
+
+SELECT * FROM main
