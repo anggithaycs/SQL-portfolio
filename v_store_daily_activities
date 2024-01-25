@@ -1,7 +1,8 @@
 /*
 Implemented v_store_daily_activities View with CASE, WINDOW, and CTE.
 
-Developed the SQL view v_store_daily_activities, utilizing CASE statements, WINDOW functions, and Common Table Expressions (CTE) to analyze daily store activities, providing nuanced insights into conversion rates, purchases, and cumulative metrics.
+Developed the SQL view v_store_daily_activities, utilizing CASE statements, WINDOW functions, and Common Table Expressions (CTE) 
+to analyze daily store activities, providing nuanced insights into conversion rates, purchases, and cumulative metrics.
 */
 CREATE OR REPLACE VIEW v_store_daily_activities AS
 
